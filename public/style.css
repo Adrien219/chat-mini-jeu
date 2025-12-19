@@ -1,0 +1,181 @@
+/* =========================
+   RESET & BASE
+========================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #0f172a; /* bleu foncé */
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* =========================
+   FORMULAIRE CONNEXION
+========================= */
+
+#joinForm {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+#joinForm input {
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: #fff;
+    border: 1px solid #334155;
+}
+
+#joinForm button {
+    padding: 10px 16px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#joinForm button:hover {
+    background: #1d4ed8;
+}
+
+/* =========================
+   CHAT
+========================= */
+
+#chatBox {
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    background: #020617;
+    border-radius: 10px;
+    padding: 12px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    border: 1px solid #334155;
+}
+
+#chatBox div {
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+#messageInput {
+    width: 480px;
+    max-width: 75%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: #fff;
+    border: 1px solid #334155;
+}
+
+#sendBtn {
+    padding: 10px 14px;
+    margin-left: 6px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background: #15803d;
+}
+
+/* =========================
+   JEU
+========================= */
+
+#startGameBtn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #9333ea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#startGameBtn:disabled {
+    background: #475569;
+    cursor: not-allowed;
+}
+
+#status {
+    margin: 12px 0;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* =========================
+   PLATEAU TIC-TAC-TOE
+========================= */
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.cell {
+    background: #020617;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #f8fafc;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.cell:hover:enabled {
+    background: #1e293b;
+    transform: scale(1.05);
+}
+
+.cell:disabled {
+    cursor: not-allowed;
+    background: #020617;
+    color: #64748b;
+}
+
+/* =======================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+    #gameBoard {
+        grid-template-columns: repeat(3, 60px);
+        grid-template-rows: repeat(3, 60px);
+    }
+
+    .cell {
+        font-size: 24px;
+    }
+
+    #messageInput {
+        width: 100%;
+        margin-bottom: 6px;
+    }
+}

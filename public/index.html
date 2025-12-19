@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat LAN + TicTacToe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<form id="joinForm">
+    <input id="username" placeholder="Pseudo" required>
+    <input id="room" placeholder="Salle" required>
+    <button type="submit">Rejoindre</button>
+</form>
+
+<div id="chatBox"></div>
+<input id="messageInput" placeholder="Message">
+<button id="sendBtn">Envoyer</button>
+
+<hr>
+
+<button id="startGameBtn">Démarrer la partie</button>
+<div id="status"></div>
+<div id="gameBoard"></div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
